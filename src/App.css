@@ -1,0 +1,132 @@
+.card-header {
+    width: 1360px;
+    height: 40px;
+    background: #5CA5A5;
+    padding-top: 56px;
+    margin-bottom: 100px;
+}
+
+.lang {
+    padding-left: 10px;
+    width: 1150px;
+    padding-top: 5px;
+    height: 47px;
+    margin-left: 100px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
+}
+
+.block-left,
+.info {
+    gap: 15px;
+    display: flex;
+}
+
+.logo1{
+    margin-left: 20px;
+    margin-top: 4px;
+}
+
+.block {
+    gap: 15px;
+    width: 1160px;
+    position: relative;
+    margin-top: 50px;
+    margin-left: 100px;
+    display: flex;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
+}
+
+.lang input{
+    margin-top: 2px;
+}
+
+.frontend{
+    width: 100px;
+    background-color: red;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.hr {
+    width: 5px;
+    height: 100px;
+    background: #5CA5A5;
+    border-radius: 100px 0px 0px 100px;
+}
+
+.block-right {
+    position: absolute;
+    right: 15px;
+}
+
+input {
+    border: none;
+    color: #5CA5A5;
+    margin-right: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 30px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.123px;
+}
+
+.info2 {
+    display: flex;
+    align-items: center;
+    gap: 18.5px;
+    margin-top: -29px;
+    margin-left: 3px;
+}
+
+.info2 p {
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    color: #7C8F8F;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.138px;
+    align-items: center;
+    gap: 18.5px;
+    flex-shrink: 0;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.info1 p {
+    color: #2B3939;
+    margin-top: -5px;
+    margin-left: 3px;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.info p {
+    height: 18px;
+    border-radius: 10px;
+    width: auto;
+    color: #FFF;
+    padding: 5px 5px 0px 5px;
+    margin-top: -3px;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: -0.108px;
+    text-transform: uppercase;
+}
