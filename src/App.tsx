@@ -1,16 +1,71 @@
+import { useState } from 'react'
 import './App.css'
 import Input from './components/inputs'
 
 function App() {
+  const [frontend, setFrontend] = useState(false);
+  const [html, setHtml] = useState(false);
+  const [senior, setSenior] = useState(false);
+  function handleclick() {
+    setFrontend(true);
+  }
+
+  function handleclick1() {
+    setSenior(true);
+  }
+  function handleclick2() {
+    setHtml(true);
+  }
+
+  function closebutton() {
+    setFrontend(false);
+    setSenior(false);
+  }
+
+  function closebutton1() {
+    setSenior(false);
+  }
 
   return (
     <>
       <div className="card">
         <div className="card-header">
           <div className="lang">
-            <div className="frontend">
-              <Input value="Frontend" />
-              <div className="yopmoq"></div>
+            <div style={frontend ? { display: 'block' } : { display: 'none' }} className="frontend">
+              <div style={{display:'flex'}}>
+                <Input value="Frontend" />
+                <div className="yopmoq">
+                  <svg onClick={closebutton} style={{ cursor: 'pointer' }} xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32" fill="none">
+                    <path d="M0 0H28C30.2091 0 32 1.79086 32 4V28C32 30.2091 30.2091 32 28 32H0V0Z" fill="#2B3939" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.435 11.1213L20.3137 9L15.7175 13.5962L11.1213 9L9 11.1213L13.5962 15.7175L9 20.3137L11.1213 22.435L15.7175 17.8388L20.3137 22.435L22.435 20.3137L17.8388 15.7175L22.435 11.1213Z" fill="white" />
+                  </svg>
+                </div>
+              </div>
+
+            </div>
+            <div style={senior ? { display: 'block' } : { display: 'none' }} className="frontend">
+              <div style={{display:'flex'}}>
+                <Input value="Senior" />
+                <div className="yopmoq">
+                  <svg style={{ cursor: 'pointer' }} xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32" fill="none">
+                    <path d="M0 0H28C30.2091 0 32 1.79086 32 4V28C32 30.2091 30.2091 32 28 32H0V0Z" fill="#2B3939" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.435 11.1213L20.3137 9L15.7175 13.5962L11.1213 9L9 11.1213L13.5962 15.7175L9 20.3137L11.1213 22.435L15.7175 17.8388L20.3137 22.435L22.435 20.3137L17.8388 15.7175L22.435 11.1213Z" fill="white" />
+                  </svg>
+                </div>
+              </div>
+
+            </div>
+            <div style={html ? { display: 'block' } : { display: 'none' }} className="frontend">
+              <div style={{display:'flex'}}>
+                <Input value="HTML" />
+                <div className="yopmoq">
+                  <svg style={{ cursor: 'pointer' }} xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32" fill="none">
+                    <path d="M0 0H28C30.2091 0 32 1.79086 32 4V28C32 30.2091 30.2091 32 28 32H0V0Z" fill="#2B3939" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.435 11.1213L20.3137 9L15.7175 13.5962L11.1213 9L9 11.1213L13.5962 15.7175L9 20.3137L11.1213 22.435L15.7175 17.8388L20.3137 22.435L22.435 20.3137L17.8388 15.7175L22.435 11.1213Z" fill="white" />
+                  </svg>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -69,9 +124,9 @@ function App() {
 
             </div>
             <div className="block-right">
-              <Input value="Frontend" />
-              <Input value="Senior" />
-              <Input value="HTML" />
+              <Input onclick={handleclick} value="Frontend" />
+              <Input onclick={handleclick1} value="Senior" />
+              <Input onclick={handleclick2} value="HTML" />
               <Input value="CSS" />
               <Input value="JavaScript" />
             </div>

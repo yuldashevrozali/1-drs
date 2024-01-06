@@ -1,8 +1,8 @@
 function Input(props:any) {
-    const { value} = props;
+    const { value , onclick} = props;
   return (
     <>
-    <input type="button" value={value} />
+    <input onClick={onclick} type="button" value={value} />
     </>
   )
 }
