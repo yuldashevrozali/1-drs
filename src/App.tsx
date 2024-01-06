@@ -6,8 +6,15 @@ function App() {
   const [frontend, setFrontend] = useState(false);
   const [html, setHtml] = useState(false);
   const [senior, setSenior] = useState(false);
+  const [css, setCss] = useState(false);
+  const [javaScript, setJavaScript] = useState(false);
+
   function handleclick() {
     setFrontend(true);
+  }
+
+  function handleclick3() {
+    setCss(true);
   }
 
   function handleclick1() {
@@ -17,13 +24,27 @@ function App() {
     setHtml(true);
   }
 
+  function handleclick45() {
+    setJavaScript(true);
+  }
+
   function closebutton() {
     setFrontend(false);
-    setSenior(false);
   }
 
   function closebutton1() {
     setSenior(false);
+  }
+  function closebutton2() {
+    setHtml(false);
+  }
+
+  function closebutton3() {
+    setCss(false);
+  }
+
+  function closebutton4() {
+    setJavaScript(false);
   }
 
   return (
@@ -47,7 +68,7 @@ function App() {
               <div style={{display:'flex'}}>
                 <Input value="Senior" />
                 <div className="yopmoq">
-                  <svg style={{ cursor: 'pointer' }} xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32" fill="none">
+                  <svg onClick={closebutton1} style={{ cursor: 'pointer' }} xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32" fill="none">
                     <path d="M0 0H28C30.2091 0 32 1.79086 32 4V28C32 30.2091 30.2091 32 28 32H0V0Z" fill="#2B3939" />
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M22.435 11.1213L20.3137 9L15.7175 13.5962L11.1213 9L9 11.1213L13.5962 15.7175L9 20.3137L11.1213 22.435L15.7175 17.8388L20.3137 22.435L22.435 20.3137L17.8388 15.7175L22.435 11.1213Z" fill="white" />
                   </svg>
@@ -59,7 +80,31 @@ function App() {
               <div style={{display:'flex'}}>
                 <Input value="HTML" />
                 <div className="yopmoq">
-                  <svg style={{ cursor: 'pointer' }} xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32" fill="none">
+                  <svg onClick={closebutton2} style={{ cursor: 'pointer' }} xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32" fill="none">
+                    <path d="M0 0H28C30.2091 0 32 1.79086 32 4V28C32 30.2091 30.2091 32 28 32H0V0Z" fill="#2B3939" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.435 11.1213L20.3137 9L15.7175 13.5962L11.1213 9L9 11.1213L13.5962 15.7175L9 20.3137L11.1213 22.435L15.7175 17.8388L20.3137 22.435L22.435 20.3137L17.8388 15.7175L22.435 11.1213Z" fill="white" />
+                  </svg>
+                </div>
+              </div>
+
+            </div>
+            <div style={css ? { display: 'block' } : { display: 'none' }} className="frontend">
+              <div style={{display:'flex'}}>
+                <Input value="CSS" />
+                <div className="yopmoq">
+                  <svg onClick={closebutton3} style={{ cursor: 'pointer' }} xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32" fill="none">
+                    <path d="M0 0H28C30.2091 0 32 1.79086 32 4V28C32 30.2091 30.2091 32 28 32H0V0Z" fill="#2B3939" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.435 11.1213L20.3137 9L15.7175 13.5962L11.1213 9L9 11.1213L13.5962 15.7175L9 20.3137L11.1213 22.435L15.7175 17.8388L20.3137 22.435L22.435 20.3137L17.8388 15.7175L22.435 11.1213Z" fill="white" />
+                  </svg>
+                </div>
+              </div>
+
+            </div>
+            <div style={javaScript ? { display: 'block' } : { display: 'none' }} className="frontend">
+              <div style={{display:'flex'}}>
+                <Input value="JavaScript" />
+                <div className="yopmoq">
+                  <svg onClick={closebutton4} style={{ cursor: 'pointer' }} xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32" fill="none">
                     <path d="M0 0H28C30.2091 0 32 1.79086 32 4V28C32 30.2091 30.2091 32 28 32H0V0Z" fill="#2B3939" />
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M22.435 11.1213L20.3137 9L15.7175 13.5962L11.1213 9L9 11.1213L13.5962 15.7175L9 20.3137L11.1213 22.435L15.7175 17.8388L20.3137 22.435L22.435 20.3137L17.8388 15.7175L22.435 11.1213Z" fill="white" />
                   </svg>
@@ -127,8 +172,8 @@ function App() {
               <Input onclick={handleclick} value="Frontend" />
               <Input onclick={handleclick1} value="Senior" />
               <Input onclick={handleclick2} value="HTML" />
-              <Input value="CSS" />
-              <Input value="JavaScript" />
+              <Input onclick={handleclick3} value="CSS" />
+              <Input onclick={handleclick45} value="JavaScript" />
             </div>
           </div>
 
