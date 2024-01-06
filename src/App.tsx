@@ -10,7 +10,7 @@ function App() {
           <div className="lang">
             <div className="frontend">
               <Input value="Frontend" />
-              <div className="yopmoq"></div>
+              <div className="yopmo"></div>
             </div>
           </div>
         </div>
